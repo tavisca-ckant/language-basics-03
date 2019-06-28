@@ -41,8 +41,6 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
 
         public static int[] SelectMeals(int[] protein, int[] carbs, int[] fat, string[] dietPlans)
         {
-            int len = protein.Length;
-            
             // Calculate total calories.
             int [] calories = CalculateCalories (protein, carbs, fat);
 
