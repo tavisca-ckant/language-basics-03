@@ -55,16 +55,15 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
             return meals;
         }
 
-        private static int GetIndexOfRecommendedMeal (int[] protein, int[] carbs, int[] fat, int[] calories, string dietPlans)
+        private static int GetIndexOfRecommendedMeal (int[] protein, int[] carbs, int[] fat, int[] calories, string dietPlan)
         {
-            string diet = dietPlans;
             List<int> indices = new List<int>();
             indices = AddDefaultIndexes (protein.Length);
 
             // Iterate through each character in diet plan
-            for (int j = 0; j < diet.Length; j++) 
+            for (int j = 0; j < dietPlan.Length; j++) 
             {             
-                indices = IndexesMatchingDietPlan (protein, carbs, fat, calories, diet[j], indices);
+                indices = IndexesMatchingDietPlan (protein, carbs, fat, calories, dietPlan[j], indices);
                 // If length of last indices[] is 1 add that index to meals[] and break;
                 if (indices.Count == 1) 
                 {
